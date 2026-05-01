@@ -22,12 +22,10 @@ div[data-testid="stVerticalBlock"] > div { gap: 0 !important; }
     border-radius: 0 0 32px 32px;
     padding: 36px 24px 32px;
     margin: -16px -16px 0 -16px;
-    position: relative;
-    overflow: hidden;
+    position: relative; overflow: hidden;
 }
 .hero::before {
-    content: '';
-    position: absolute; inset: 0;
+    content: ''; position: absolute; inset: 0;
     background: radial-gradient(ellipse at 80% 20%, rgba(167,139,250,0.35) 0%, transparent 60%),
                 radial-gradient(ellipse at 20% 80%, rgba(109,40,217,0.4) 0%, transparent 60%);
 }
@@ -36,57 +34,42 @@ div[data-testid="stVerticalBlock"] > div { gap: 0 !important; }
     display: inline-flex; align-items: center; gap: 6px;
     background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
     border-radius: 20px; padding: 5px 12px; font-size: 12px; color: rgba(255,255,255,0.9);
-    font-weight: 600; letter-spacing: 0.3px; margin-bottom: 14px;
-    backdrop-filter: blur(8px);
+    font-weight: 600; letter-spacing: 0.3px; margin-bottom: 14px; backdrop-filter: blur(8px);
 }
-.hero-title {
-    font-size: 34px; font-weight: 900; color: white;
-    line-height: 1.08; margin: 0 0 10px; letter-spacing: -0.5px;
-}
+.hero-title { font-size: 34px; font-weight: 900; color: white; line-height: 1.08; margin: 0 0 10px; letter-spacing: -0.5px; }
 .hero-sub { color: rgba(255,255,255,0.7); font-size: 14px; margin: 0 0 20px; line-height: 1.5; }
 .hero-stats { display: flex; gap: 16px; }
 .hero-stat {
     background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 12px; padding: 10px 16px; flex: 1; text-align: center;
-    backdrop-filter: blur(8px);
+    border-radius: 12px; padding: 10px 16px; flex: 1; text-align: center; backdrop-filter: blur(8px);
 }
 .hero-stat-num { font-size: 20px; font-weight: 800; color: white; }
 .hero-stat-label { font-size: 10px; color: rgba(255,255,255,0.65); font-weight: 500; margin-top: 1px; }
 
 .card {
-    background: white; border-radius: 20px; padding: 20px 20px 16px;
-    margin-bottom: 12px;
+    background: white; border-radius: 20px; padding: 20px 20px 16px; margin-bottom: 12px;
     box-shadow: 0 2px 12px rgba(100,80,200,0.08), 0 1px 3px rgba(0,0,0,0.05);
-    border: 1px solid rgba(200,190,255,0.3);
-    transition: box-shadow 0.2s;
+    border: 1px solid rgba(200,190,255,0.3); transition: box-shadow 0.2s;
 }
 .card:hover { box-shadow: 0 4px 20px rgba(100,80,200,0.13), 0 1px 4px rgba(0,0,0,0.06); }
-.card-head {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 14px;
-}
+.card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
 .card-left { display: flex; align-items: center; gap: 11px; }
 .card-icon {
     width: 38px; height: 38px; border-radius: 11px;
     background: linear-gradient(135deg, #EDE9FF, #DDD6FE);
-    display: flex; align-items: center; justify-content: center; font-size: 17px;
-    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0;
 }
 .card-title { font-size: 16px; font-weight: 700; color: #1a1a2e; }
-.card-check {
-    width: 22px; height: 22px; border-radius: 50%;
+.card-sel-badge {
     background: linear-gradient(135deg, #7C3AED, #6D28D9);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 11px; color: white; font-weight: 700; flex-shrink: 0;
+    color: white; font-size: 11px; font-weight: 700;
+    border-radius: 20px; padding: 4px 12px;
+    white-space: nowrap; max-width: 180px;
+    overflow: hidden; text-overflow: ellipsis; flex-shrink: 0;
 }
-.field-label {
-    font-size: 13px; font-weight: 700; color: #374151;
-    margin: 12px 0 8px; letter-spacing: 0.1px;
-}
+.field-label { font-size: 13px; font-weight: 700; color: #374151; margin: 12px 0 8px; letter-spacing: 0.1px; }
 
-div[data-testid="stRadio"] > div {
-    flex-direction: row !important; flex-wrap: wrap; gap: 6px;
-}
+div[data-testid="stRadio"] > div { flex-direction: row !important; flex-wrap: wrap; gap: 6px; }
 div[data-testid="stRadio"] label {
     background: #F8F7FF !important; border: 1.5px solid #E5E1FF !important;
     border-radius: 22px !important; padding: 7px 15px !important;
@@ -94,31 +77,29 @@ div[data-testid="stRadio"] label {
     cursor: pointer !important; transition: all 0.15s !important; margin: 0 !important;
 }
 div[data-testid="stRadio"] label:hover {
-    border-color: #7C3AED !important; color: #7C3AED !important;
-    background: #F3F0FF !important;
+    border-color: #7C3AED !important; color: #7C3AED !important; background: #F3F0FF !important;
 }
 div[data-testid="stRadio"] label:has(input:checked) {
     background: linear-gradient(135deg, #7C3AED, #6D28D9) !important;
     border-color: transparent !important; color: white !important;
-    font-weight: 700 !important;
-    box-shadow: 0 3px 10px rgba(124,58,237,0.35) !important;
+    font-weight: 700 !important; box-shadow: 0 3px 10px rgba(124,58,237,0.35) !important;
 }
-div[data-testid="stRadio"] input[type="radio"] { display: none; }
+div[data-testid="stRadio"] input[type="radio"] {
+    position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
 div[data-testid="stRadio"] [data-testid="stMarkdownContainer"] p { display: none; }
 
 .toggle-wrap {
     background: linear-gradient(135deg, #F5F3FF, #EDE9FF);
     border: 1.5px solid #DDD6FE; border-radius: 14px;
-    padding: 13px 16px; margin-top: 10px;
-    display: flex; align-items: center; gap: 12px;
+    padding: 13px 16px; margin-top: 10px; display: flex; align-items: center; gap: 12px;
 }
 .toggle-text-title { font-size: 14px; font-weight: 700; color: #5B21B6; }
 .toggle-text-sub { font-size: 11px; color: #8B5CF6; margin-top: 1px; }
 
 .summary-card {
     background: linear-gradient(135deg, #1E1B4B, #2D1B69);
-    border-radius: 20px; padding: 20px;
-    margin-bottom: 14px;
+    border-radius: 20px; padding: 20px; margin-bottom: 14px;
     box-shadow: 0 8px 24px rgba(30,27,75,0.25);
 }
 .summary-title { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
@@ -136,46 +117,29 @@ div[data-testid="stButton"] > button {
     color: white; font-size: 16px; font-weight: 700;
     border: none; border-radius: 16px; padding: 16px 24px;
     cursor: pointer; letter-spacing: 0.2px;
-    box-shadow: 0 6px 20px rgba(109,40,217,0.4);
-    transition: all 0.2s;
+    box-shadow: 0 6px 20px rgba(109,40,217,0.4); transition: all 0.2s;
 }
-div[data-testid="stButton"] > button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 28px rgba(109,40,217,0.5);
-}
+div[data-testid="stButton"] > button:hover { transform: translateY(-1px); box-shadow: 0 10px 28px rgba(109,40,217,0.5); }
 div[data-testid="stButton"] > button:active { transform: translateY(0); }
 div[data-testid="stToggle"] label { font-size: 14px; font-weight: 600; color: #5B21B6; }
 
 .price-hero {
     background: linear-gradient(145deg, #7C3AED 0%, #5B21B6 50%, #3B0764 100%);
     border-radius: 24px; padding: 28px 24px; margin-bottom: 14px;
-    box-shadow: 0 12px 32px rgba(109,40,217,0.4);
-    position: relative; overflow: hidden;
+    box-shadow: 0 12px 32px rgba(109,40,217,0.4); position: relative; overflow: hidden;
 }
 .price-hero::after {
-    content: '';
-    position: absolute; top: -40px; right: -40px;
-    width: 160px; height: 160px; border-radius: 50%;
-    background: rgba(167,139,250,0.15);
+    content: ''; position: absolute; top: -40px; right: -40px;
+    width: 160px; height: 160px; border-radius: 50%; background: rgba(167,139,250,0.15);
 }
 .price-hero-inner { position: relative; z-index: 1; }
 .price-eyebrow { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
 .price-amount { font-size: 48px; font-weight: 900; color: white; letter-spacing: -1px; margin: 0 0 4px; line-height: 1; }
 .price-brand-note { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 16px; }
 .price-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-.badge-cat {
-    background: rgba(255,255,255,0.95); color: #7C3AED;
-    font-size: 12px; font-weight: 800; border-radius: 20px; padding: 5px 14px;
-}
-.badge-desc {
-    background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9);
-    font-size: 12px; font-weight: 500; border-radius: 20px; padding: 5px 14px;
-    border: 1px solid rgba(255,255,255,0.2);
-}
-.range-box {
-    background: rgba(0,0,0,0.25); border-radius: 14px; padding: 14px 16px;
-    display: flex; align-items: center; gap: 12px;
-}
+.badge-cat { background: rgba(255,255,255,0.95); color: #7C3AED; font-size: 12px; font-weight: 800; border-radius: 20px; padding: 5px 14px; }
+.badge-desc { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); font-size: 12px; font-weight: 500; border-radius: 20px; padding: 5px 14px; border: 1px solid rgba(255,255,255,0.2); }
+.range-box { background: rgba(0,0,0,0.25); border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
 .range-col { flex: 1; }
 .range-col-label { font-size: 9px; color: rgba(255,255,255,0.5); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
 .range-col-val { font-size: 16px; font-weight: 800; color: white; }
@@ -187,15 +151,11 @@ div[data-testid="stToggle"] label { font-size: 14px; font-weight: 600; color: #5
 .models-hdr { display: flex; justify-content: space-between; align-items: flex-end; margin: 20px 0 12px; }
 .models-hdr-title { font-size: 20px; font-weight: 800; color: #1a1a2e; }
 .models-hdr-sub { font-size: 12px; color: #888; margin-top: 2px; }
-.models-count-badge {
-    background: linear-gradient(135deg, #7C3AED, #6D28D9); color: white;
-    font-size: 13px; font-weight: 800; border-radius: 10px; padding: 4px 12px;
-}
+.models-count-badge { background: linear-gradient(135deg, #7C3AED, #6D28D9); color: white; font-size: 13px; font-weight: 800; border-radius: 10px; padding: 4px 12px; }
 .model-card {
     background: white; border-radius: 18px; padding: 16px;
     margin-bottom: 10px; border: 1.5px solid #F0EEFF;
-    box-shadow: 0 2px 10px rgba(100,80,200,0.07);
-    transition: box-shadow 0.2s, transform 0.15s;
+    box-shadow: 0 2px 10px rgba(100,80,200,0.07); transition: box-shadow 0.2s, transform 0.15s;
 }
 .model-card:hover { box-shadow: 0 6px 20px rgba(100,80,200,0.14); transform: translateY(-1px); }
 .model-card-best { border-color: #7C3AED; box-shadow: 0 4px 16px rgba(124,58,237,0.18); }
@@ -223,23 +183,19 @@ div[data-testid="stToggle"] label { font-size: 14px; font-weight: 600; color: #5
 .diff-zero { font-size: 12px; font-weight: 700; color: #7C3AED; background: #EDE9FF; border-radius: 8px; padding: 3px 8px; }
 .spec-row { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
 .spec-pill {
-    background: #F9F9FF; border: 1px solid #EDE9FF;
-    border-radius: 8px; padding: 4px 9px;
-    font-size: 11px; color: #4B5563; font-weight: 600;
-    display: flex; align-items: center; gap: 4px;
+    background: #F9F9FF; border: 1px solid #EDE9FF; border-radius: 8px; padding: 4px 9px;
+    font-size: 11px; color: #4B5563; font-weight: 600; display: flex; align-items: center; gap: 4px;
 }
 .buy-row { display: flex; align-items: center; gap: 8px; padding-top: 10px; border-top: 1px solid #F3F4F6; }
 .buy-label { font-size: 11px; color: #9CA3AF; flex: 1; font-weight: 600; }
 .buy-amazon {
-    background: linear-gradient(135deg, #FF9900, #F08000);
-    color: white; text-decoration: none; border-radius: 22px;
-    padding: 7px 14px; font-size: 12px; font-weight: 700;
+    background: linear-gradient(135deg, #FF9900, #F08000); color: white; text-decoration: none;
+    border-radius: 22px; padding: 7px 14px; font-size: 12px; font-weight: 700;
     box-shadow: 0 2px 8px rgba(255,153,0,0.3);
 }
 .buy-flipkart {
-    background: linear-gradient(135deg, #2874F0, #1a5fd4);
-    color: white; text-decoration: none; border-radius: 22px;
-    padding: 7px 14px; font-size: 12px; font-weight: 700;
+    background: linear-gradient(135deg, #2874F0, #1a5fd4); color: white; text-decoration: none;
+    border-radius: 22px; padding: 7px 14px; font-size: 12px; font-weight: 700;
     box-shadow: 0 2px 8px rgba(40,116,240,0.3);
 }
 .divider { height: 1px; background: linear-gradient(90deg, transparent, #DDD6FE, transparent); margin: 4px 0 14px; }
@@ -288,11 +244,11 @@ BATTERIES  = ["3000mAh", "4000mAh", "4500mAh", "5000mAh", "5000mAh+"]
 BRAND_EMOJI = {"Apple":"🍎","Samsung":"🌟","Xiaomi":"🔴","OnePlus":"➕","Realme":"🟡","POCO":"⚡","Motorola":"🦋"}
 
 CATEGORY_MAP = [
-    (0,     15000,  "Budget",          "Great value everyday use",           "#10B981"),
-    (15000, 25000,  "Mid-range",       "Balanced performance & features",    "#3B82F6"),
-    (25000, 40000,  "Upper mid-range", "Premium features, smart price",      "#8B5CF6"),
-    (40000, 70000,  "Premium",         "Flagship-level experience",          "#F59E0B"),
-    (70000, 999999, "Flagship",        "Best-in-class everything",           "#EF4444"),
+    (0,     15000,  "Budget",          "Great value everyday use",        "#10B981"),
+    (15000, 25000,  "Mid-range",       "Balanced performance & features", "#3B82F6"),
+    (25000, 40000,  "Upper mid-range", "Premium features, smart price",   "#8B5CF6"),
+    (40000, 70000,  "Premium",         "Flagship-level experience",       "#F59E0B"),
+    (70000, 999999, "Flagship",        "Best-in-class everything",        "#EF4444"),
 ]
 
 
@@ -316,7 +272,7 @@ def get_category(price):
 
 def score_phone(phone, brand, processor, ram, storage, camera, display, five_g, target):
     sc = 0
-    if phone["brand"] == brand:     sc += 40
+    if phone["brand"] == brand: sc += 40
     pi = PROCESSORS.index(phone["processor"]); ti = PROCESSORS.index(processor)
     if pi == ti: sc += 20
     elif abs(pi-ti) == 1: sc += 10
@@ -340,6 +296,17 @@ def pill_radio(label, options, key):
     return val
 
 
+def card_head(icon, title, badge):
+    return (
+        f'<div class="card"><div class="card-head">'
+        f'<div class="card-left"><div class="card-icon">{icon}</div>'
+        f'<span class="card-title">{title}</span></div>'
+        f'<span class="card-sel-badge">{badge}</span>'
+        f'</div>'
+    )
+
+
+# ── Hero ──────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="hero">
   <div class="hero-inner">
@@ -357,29 +324,41 @@ st.markdown("""
 
 st.markdown('<div style="height:16px;"></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="card"><div class="card-head"><div class="card-left"><div class="card-icon">🏷️</div><span class="card-title">Brand</span></div><div class="card-check">✓</div></div>', unsafe_allow_html=True)
+# ── Read current selections from session state ────────────────────────────────
+ss = st.session_state
+_brand     = ss.get("brand",     BRANDS[0])
+_processor = ss.get("processor", PROCESSORS[0])
+_ram       = ss.get("ram",       RAMS[0])
+_storage   = ss.get("storage",   STORAGES[0])
+_camera    = ss.get("camera",    CAMERAS[0])
+_display   = ss.get("display",   DISPLAYS[0])
+_battery   = ss.get("battery",   BATTERIES[0])
+_five_g    = ss.get("5g",        True)
+
+# ── Inputs ────────────────────────────────────────────────────────────────────
+st.markdown(card_head("🏷️", "Brand", f"{BRAND_EMOJI.get(_brand,'')} {_brand}"), unsafe_allow_html=True)
 selected_brand = pill_radio("Select Brand", BRANDS, "brand")
 st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown('<div class="card"><div class="card-head"><div class="card-left"><div class="card-icon">⚙️</div><span class="card-title">Performance</span></div><div class="card-check">✓</div></div>', unsafe_allow_html=True)
+st.markdown(card_head("⚙️", "Performance", f"{_processor} · {_ram}"), unsafe_allow_html=True)
 selected_processor = pill_radio("Processor", PROCESSORS, "processor")
 st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
 selected_ram = pill_radio("RAM", RAMS, "ram")
 st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown('<div class="card"><div class="card-head"><div class="card-left"><div class="card-icon">💾</div><span class="card-title">Storage</span></div><div class="card-check">✓</div></div>', unsafe_allow_html=True)
+st.markdown(card_head("💾", "Storage", _storage), unsafe_allow_html=True)
 selected_storage = pill_radio("Internal Storage", STORAGES, "storage")
 st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown('<div class="card"><div class="card-head"><div class="card-left"><div class="card-icon">📸</div><span class="card-title">Camera</span></div><div class="card-check">✓</div></div>', unsafe_allow_html=True)
+st.markdown(card_head("📸", "Camera", _camera), unsafe_allow_html=True)
 selected_camera = pill_radio("Main Camera (MP)", CAMERAS, "camera")
 st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown('<div class="card"><div class="card-head"><div class="card-left"><div class="card-icon">🖥️</div><span class="card-title">Display</span></div><div class="card-check">✓</div></div>', unsafe_allow_html=True)
+st.markdown(card_head("🖥️", "Display", _display), unsafe_allow_html=True)
 selected_display = pill_radio("Display Type", DISPLAYS, "display")
 st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown('<div class="card"><div class="card-head"><div class="card-left"><div class="card-icon">🔋</div><span class="card-title">Battery &amp; Connectivity</span></div><div class="card-check">✓</div></div>', unsafe_allow_html=True)
+st.markdown(card_head("🔋", "Battery &amp; Connectivity", f"{_battery} · {'5G' if _five_g else '4G'}"), unsafe_allow_html=True)
 selected_battery = pill_radio("Battery Capacity", BATTERIES, "battery")
 st.markdown('<div class="toggle-wrap">', unsafe_allow_html=True)
 col_t, col_s = st.columns([4, 1])
@@ -389,6 +368,7 @@ with col_s:
     five_g = st.toggle("5g", value=True, label_visibility="hidden")
 st.markdown('</div></div>', unsafe_allow_html=True)
 
+# ── Specs summary card ────────────────────────────────────────────────────────
 st.markdown(f"""
 <div class="summary-card">
   <div class="summary-title">Your Selected Specs</div>
@@ -429,8 +409,10 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
+# ── Predict button ────────────────────────────────────────────────────────────
 predict = st.button("📈   Predict Price Now", use_container_width=True)
 
+# ── Results ───────────────────────────────────────────────────────────────────
 if predict:
     price = estimate_price(selected_brand, selected_processor, selected_ram,
                            selected_storage, selected_camera, selected_display,
